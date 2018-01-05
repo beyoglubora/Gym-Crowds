@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+    <head>
+        <link rel="stylesheet" type = text/css href="{% static 'crowds/style.css' %}"/>
+        <link href="https://fonts.googleapis.com/css?family=Cabin|Cabin+Sketch|Poiret+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Cinzel|Josefin+Slab|Marcellus|Monoton|Poiret+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Numans" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan|Chewy|Dancing+Script|Great+Vibes|Julius+Sans+One|Luckiest+Guy|Monoton|Sacramento|Satisfy|Sigmar+One|Tangerine" rel="stylesheet">
+    </head>
+    <header>
+        <div class = 'box green'>
+            <p id="sumers" >Sumers Rec Center</p>
+        </div>
+    </header>
+
+
+    <body style="background-color:#82e1ff;">
+        <div class = 'white tile'>
+
+            {% if gym_status == 3 %}
+                <p id = "packed">PACKED</p>
+            {% endif %}
+
+            {% if gym_status == 1 %}
+                <p id = "slightly_busy">SLIGHTLY <br> <br> BUSY</p>
+            {% endif %}
+
+            {% if gym_status == 2 %}
+                <p id = "crowded">CROWDED</p>
+            {% endif %}
+
+            {% if gym_status == 0 %}
+                <p id = "not_crowded">NOT CROWDED</p>
+            {% endif %}
+
+            {% if gym_status == -1 %}
+                <p id="closed">CLOSED</p>
+            {% endif %}
+
+            <p id = 'times'>Mon - Thu <br> 6:00am-11:00pm <br><br> Fri <br> 6:00am-9:00pm <br><br> Sat <br> 9:00am-9:00pm <br><br> Sun <br> 9:00am-11:00pm </p>
+        </div>
+
+        <p id= 'bear'> BearFit </p>
+        <p id = 'classes'>Classes</p>
+
+
+        <div class = 'pink banner'>
+        </div>
+
+        <img id = 'chart' src = "{% static 'images/testplot.png'%}" , width=520 height=400>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,400,700,800' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Raleway:400,700,300,200,100,900' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+
+
+        <div id='hex_body1'>
+            <div id='hex_top1'></div>
+            <img id = hex_image src="{{ activities.0.2 }}" height="{{ activities.0.3 }}" width = "{{ activities.0.4 }}" style="margin: {{ activities.0.5 }}px 0 0 {{ activities.0.6 }}px">
+            <div id = white_box1>
+                <p id = 'text_activity'>{{ activities.0.0 }}<br>{{ activities.0.1 }}</p>
+            </div>
+            <div id='hex_bottom1'></div>
+        </div>
+
+        <div id='hex_body2'>
+            <div id='hex_top1'></div>
+            <img id = hex_image src="{{ activities.1.2 }}" height="{{ activities.1.3 }}" width = "{{ activities.1.4 }}" style="margin: {{ activities.1.5 }}px 0 0 {{ activities.1.6 }}px">
+            <div id = white_box1>
+                <p id = 'text_activity'>{{ activities.1.0 }}<br>{{ activities.1.1 }}</p>
+            </div>
+            <div id='hex_bottom1'></div>
+        </div>
+
+        <div id='hex_body3'>
+            <div id='hex_top1'></div>
+            <img id = hex_image src="{{ activities.2.2 }}" height="{{ activities.2.3 }}" width = "{{ activities.2.4 }}" style="margin: {{ activities.2.5 }}px 0 0 {{ activities.2.6 }}px">
+            <div id = white_box1>
+                <p id = 'text_activity'>{{ activities.2.0 }}<br>{{ activities.2.1 }}</p>
+            </div>
+            <div id='hex_bottom1'></div>
+        </div>
+
+        <div id='hex_body4'>
+            <div id='hex_top1'></div>
+            <img id = hex_image src="{{ activities.3.2 }}" height="{{ activities.3.3 }}" width = "{{ activities.3.4 }}" style="margin: {{ activities.3.5 }}px 0 0 {{ activities.3.6 }}px">
+            <div id = white_box1>
+                <p id = 'text_activity'>{{ activities.3.0 }}<br>{{ activities.3.1 }}</p>
+            </div>
+            <div id='hex_bottom1'></div>
+        </div>
+
+        <div id='hex_body5'>
+            <div id='hex_top1'></div>
+            <img id = hex_image src="{{ activities.4.2 }}" height="{{ activities.4.3 }}" width = "{{ activities.4.4 }}", style="margin: {{ activities.4.5 }}px 0 0 {{ activities.3.6 }}px">
+            <div id = white_box1>
+                <p id = 'text_activity'>{{ activities.4.0 }}<br>{{ activities.4.1 }}</p>
+            </div>
+            <div id='hex_bottom1'></div>
+        </div>
+
+        <div id='hex_body6'>
+            <div id='hex_top1'></div>
+            <img id = hex_image src="{{ activities.5.2 }}" height="{{ activities.5.3 }}" width = {{ activities.5.4 }}>
+            <div id = white_box1>
+                <p id = 'text_activity'>{{ activities.5.0 }}<br>{{ activities.5.1 }}</p>
+            </div>
+            <div id='hex_bottom1'></div>
+        </div>
+
+
+    </body>
+</html>
